@@ -27,7 +27,7 @@ const PropertyCard = ({
   if (!images.length) return null;
 
   return (
-    <div className="m-8 w-72 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition cursor-pointer">
+    <div className="m-4 w-72 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition cursor-pointer">
       <div className="relative">
         <Image
           src={images[currentImage]}
@@ -44,10 +44,13 @@ const PropertyCard = ({
         </button>
       </div>
       <div className="p-4">
-        <p className="font-semibold">{title}</p>
-        <p className="text-gray-500 text-sm">{location}</p>
-        <p className="text-gray-400 text-sm">Rating: {rating}</p>
-        <p className="text-rose-500 font-bold mt-1">Price: {price} / ночь</p>
+        <p className="font-semibold text-black">{title}</p>
+        <p className="text-gray-700 text-sm">{location}</p>
+
+        <p className="text-rose-500 font-bold mt-1 flex items-center justify-between">
+          ${price} / ночь{" "}
+          <span className="text-gray-600 text-sm">★{rating}</span>
+        </p>
       </div>
     </div>
   );
