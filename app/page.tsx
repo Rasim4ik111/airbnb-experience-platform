@@ -1,11 +1,18 @@
 "use client";
 import { useState } from "react";
 import PropertyList from "./components/property/PropertyList";
-import { Modal } from "./components/shared/Modal";
-import { BookingForm } from "./components/booking/BookingForm";
-import { Header } from "./Header";
+import { Header } from "./components/layouts/Header";
 
-const properties = [
+type Property = {
+  id: string;
+  title: string;
+  location: string;
+  price: number;
+  rating: number;
+  images: string[];
+};
+
+const properties: Property[] = [
   {
     id: "1",
     title: "Комната в Париже",
@@ -73,17 +80,12 @@ const properties = [
 ];
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
 
       <section className="p-8 flex flex-wrap justify-center">
-        <PropertyList
-          properties={properties}
-          onSelect={() => setIsModalOpen(true)}
-        />
+        <PropertyList properties={properties} />
       </section>
     </div>
   );
