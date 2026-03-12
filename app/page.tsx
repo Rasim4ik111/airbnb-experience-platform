@@ -81,7 +81,7 @@ const properties: Property[] = [
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <Header />
 
       <section className="p-8 flex flex-wrap justify-center">

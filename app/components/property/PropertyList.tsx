@@ -28,6 +28,7 @@ const PropertyList = ({ properties }: PropertyListProps) => {
     <>
       {filtered.map((prop) => (
         <PropertyCard
+          key={prop.id}
           title={prop.title}
           location={prop.location}
           price={prop.price}

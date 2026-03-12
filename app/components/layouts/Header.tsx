@@ -3,7 +3,10 @@ import ThemeToggle from "../shared/ThemeToggle";
 
 export const Header = () => {
   return (
-    <header className="flex justify-around items-center mb-8 border-b border-gray-300 pb-8 p-8 bg-gray-100">
+    <header
+      style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}
+      className="flex justify-around items-center mb-8 border-b border-gray-300 dark:border-gray-200 pb-8 p-8 bg-gray-100 dark:bg-gray-800 dark:text-white"
+    >
       {/* SVG логотипа */}
       <svg
         width="102"
@@ -41,10 +44,10 @@ export const Header = () => {
       </div>
       <ThemeToggle />
       <nav>
-        <button className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-black transition">
+        <button className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-black transition dark:text-gray-500">
           Menu
         </button>
-        <button className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-black transition">
+        <button className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-black transition dark:text-gray-500">
           About
         </button>
       </nav>

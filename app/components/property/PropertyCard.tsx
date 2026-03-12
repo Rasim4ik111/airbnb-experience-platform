@@ -18,10 +18,10 @@ const PropertyCard = ({
   images,
 }: PropertyCardProps) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [isFavorite, setisFavorite] = useState<boolean>(false);
 
   const handleClick = () => {
-    setToggle((a) => !a);
+    setisFavorite((a) => !a);
   };
 
   if (!images.length) return null;
@@ -40,16 +40,24 @@ const PropertyCard = ({
           onClick={handleClick}
           className="absolute top-3 right-3 text-xl"
         >
-          {toggle ? "❤️" : "🤍"}
+          {isFavorite ? "❤️" : "🤍"}
         </button>
       </div>
       <div className="p-4">
-        <p className="font-semibold text-black">{title}</p>
-        <p className="text-gray-700 text-sm">{location}</p>
-
+        <p className="font-semibold" style={{ color: "var(--text)" }}>
+          {title}
+        </p>
+        <p className="text-sm" style={{ color: "var(--text)", opacity: 0.7 }}>
+          {location}
+        </p>
         <p className="text-rose-500 font-bold mt-1 flex items-center justify-between">
           ${price} / ночь{" "}
-          <span className="text-gray-600 text-sm">★{rating}</span>
+          <span
+            className="text-sm"
+            style={{ color: "var(--text)", opacity: 0.6 }}
+          >
+            ★{rating}
+          </span>
         </p>
       </div>
     </div>
