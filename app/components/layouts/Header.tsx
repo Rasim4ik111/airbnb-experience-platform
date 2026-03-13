@@ -45,10 +45,7 @@ export const Header = () => {
       <ThemeToggle />
       <nav>
         <button className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-black transition dark:text-gray-500">
-          Menu
-        </button>
-        <button className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-black transition dark:text-gray-500">
-          About
+          Profile
         </button>
       </nav>
     </header>

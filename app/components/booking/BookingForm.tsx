@@ -26,6 +26,9 @@ function reducer(state: BookingState, action: Action) {
     case "NEXT_STEP":
       return { ...state, step: state.step + 1 };
     case "PREV_STEP":
+      if (state.step === 1) {
+        return { ...state, step: (state.step = 1) };
+      }
       return { ...state, step: state.step - 1 };
     case "SET_CHECKIN":
       return { ...state, checkIn: action.payload };
@@ -40,6 +43,7 @@ function reducer(state: BookingState, action: Action) {
 
 export const BookingForm = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div className="max-w-md border border-gray-200 rounded-2xl p-6 shadow-sm text-black">
       {state.step === 1 && (
