@@ -8,7 +8,7 @@ function App() {
     <div style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <Header />
 
-      <section className="p-2 flex flex-wrap justify-center">
+      <section className="w-[1440] mx-auto">
         <PropertyList properties={properties} />
       </section>
     </div>

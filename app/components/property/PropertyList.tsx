@@ -25,14 +25,14 @@ const PropertyList = ({ properties }: PropertyListProps) => {
   }, [properties, search]);
 
   return (
-    <div className="flex justify-center flex-col">
+    <div className="flex  flex-col ">
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="mt-4 w-50 ml-25 border rounded-full pl-4 pr-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-red-500 border-gray-300"
         placeholder="Search destinations..."
       />
-      <div className="flex flex-wrap min-w-screen justify-center">
+      <div className="flex flex-wrap justify-start px-20 w-[1440] mx-auto ">
         {filtered.map((prop) => (
           <PropertyCard
             id={prop.id}
