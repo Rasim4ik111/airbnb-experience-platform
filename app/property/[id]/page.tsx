@@ -47,23 +47,36 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             ))}
           </div>
         </div>
-        <h1 className="text-2xl">{property.title}</h1>
+        <p className="text-2xl">{property.title}</p>
         <p className="opacity-80">{property.description}</p>
 
-        <div className="flex align-center border-t border-b border-gray-300 w-150 mt-4 pt-5 pb-5  ">
-          <img
-            src={property.owner_photo}
-            alt="owner photo"
-            className="rounded-full shadow-lg object-cover w-16 h-16"
-          />
+        <div className="flex justify-between min-h-screen">
+          {/* LEFT side*/}
+          <div className="flex flex-col w-160">
+            {/* Owner*/}
+            <div className="flex items-center border-t border-b border-gray-200 mt-4 pt-5 pb-5">
+              <Image
+                src={property.owner_photo}
+                alt="owner photo"
+                width={150}
+                height={150}
+                className="rounded-full shadow-lg object-cover w-16 h-16"
+              />
+              <div className="ml-8">
+                <p>Owner: {property.owner}</p>
+                <p className="opacity-50">{property.owner_info}</p>
+              </div>
+            </div>
 
-          <div className="ml-8 ">
-            <h1>Owner: {property.owner}</h1>
-            <p className="opacity-50">{property.owner_info}</p>
+            <div className="mt-4">
+              <p>Здесь доп. информация</p>
+            </div>
           </div>
-        </div>
-        <div className="absolute left-184.5 top-140">
-          <BookingForm />
+
+          {/* Right */}
+          <div className="sticky top-30 self-start">
+            <BookingForm price={property.price} />
+          </div>
         </div>
       </main>
     </div>

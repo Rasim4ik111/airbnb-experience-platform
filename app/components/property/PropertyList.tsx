@@ -25,19 +25,27 @@ const PropertyList = ({ properties }: PropertyListProps) => {
   }, [properties, search]);
 
   return (
-    <>
-      {filtered.map((prop) => (
-        <PropertyCard
-          id={prop.id}
-          key={prop.id}
-          title={prop.title}
-          location={prop.location}
-          price={prop.price}
-          rating={prop.rating}
-          images={prop.images}
-        />
-      ))}
-    </>
+    <div className="flex justify-center flex-col">
+      <input
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="mt-4 w-50 ml-25 border rounded-full pl-4 pr-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-red-500 border-gray-300"
+        placeholder="Search destinations..."
+      />
+      <div className="flex flex-wrap min-w-screen justify-center">
+        {filtered.map((prop) => (
+          <PropertyCard
+            id={prop.id}
+            key={prop.id}
+            title={prop.title}
+            location={prop.location}
+            price={prop.price}
+            rating={prop.rating}
+            images={prop.images}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
