@@ -1,13 +1,8 @@
 import { BookingForm } from "@/app/components/booking/BookingForm";
 import { Header } from "@/app/components/layouts/Header";
+import { PropertyGallery } from "@/app/components/property/PropertyGallery";
 import { properties } from "@/data/properties";
 import Image from "next/image";
-
-interface paramsInterface {
-  params: {
-    id: string;
-  };
-}
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
@@ -26,27 +21,8 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <main className=" max-w-6xl mx-auto flex flex-col px-4 mt-2 relative">
         <h1 className="p-2 text-3xl ">{property.page_title}</h1>
 
-        <div className="mb-4 mt-4 max-w-12/12 mx-auto grid grid-cols-2 gap-2 rounded-xl overflow-hidden">
-          <Image
-            src={property.images[0]}
-            alt={property.title}
-            width={800}
-            height={500}
-            className="w-full h-full max-w-2xl object-cover hover:cursor-pointer hover:opacity-85 bg-black"
-          />
-          <div className="grid grid-cols-2 gap-2">
-            {[...Array(4)].map((_, i) => (
-              <Image
-                key={i}
-                src={property.images[i % property.images.length]}
-                alt=""
-                width={400}
-                height={250}
-                className="w-full h-full object-cover hover:cursor-pointer hover:opacity-85"
-              />
-            ))}
-          </div>
-        </div>
+        <PropertyGallery images={property.images} title={property.title} />
+
         <p className="text-2xl">{property.title}</p>
         <p className="opacity-80">{property.description}</p>
 
