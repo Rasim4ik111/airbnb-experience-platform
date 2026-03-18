@@ -8,7 +8,7 @@ function App() {
     <div style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <Header />
 
-      <section className="w-[1440] mx-auto">
+      <section className="">
         <PropertyList properties={properties} />
       </section>
     </div>

@@ -1,6 +1,7 @@
 import { BookingForm } from "@/app/components/booking/BookingForm";
 import { Header } from "@/app/components/layouts/Header";
 import { PropertyGallery } from "@/app/components/property/PropertyGallery";
+import { PropertyReviews } from "@/app/components/property/PropertyReviews";
 import { properties } from "@/data/properties";
 import Image from "next/image";
 
@@ -45,7 +46,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             </div>
 
             <div className="mt-4">
-              <p>Здесь доп. информация</p>
+              <PropertyReviews />
             </div>
           </div>
 

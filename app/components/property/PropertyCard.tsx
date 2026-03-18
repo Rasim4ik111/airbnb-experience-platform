@@ -42,7 +42,7 @@ const PropertyCard = ({
           />
           <button
             onClick={handleClick}
-            className="absolute top-3 right-3 text-xl"
+            className="absolute top-3 right-3 text-xl "
           >
             {isFavorite ? "❤️" : "🤍"}
           </button>

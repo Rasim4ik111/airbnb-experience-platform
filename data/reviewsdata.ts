@@ -1,4 +1,4 @@
-interface Review {
+export interface Review {
   id: string;
   author: string;
   avatar: string;
@@ -58,3 +58,5 @@ const mockReviews: Review[] = [
   },
   // ещё 2-3 отзыва
 ];
+
+export default mockReviews;
