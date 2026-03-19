@@ -29,7 +29,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         <div className="flex justify-between min-h-screen">
           {/* LEFT side*/}
-          <div className="flex flex-col w-160">
+          <div className="flex flex-col w-180">
             {/* Owner*/}
             <div className="flex items-center border-t border-b border-gray-200 mt-4 pt-5 pb-5">
               <Image

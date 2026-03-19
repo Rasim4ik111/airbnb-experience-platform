@@ -10,6 +10,10 @@ export type Property = {
   owner: string;
   owner_info: string;
   owner_photo: string;
+  coordinates: {
+    latitude: number;
+    longitude: number;
+  };
 };
 
 export const properties: Property[] = [
@@ -31,6 +35,10 @@ export const properties: Property[] = [
     owner: "Carlos",
     owner_info: "Superhost. Hosting guests for 9 years",
     owner_photo: "/profile-1.avif",
+    coordinates: {
+      latitude: 48.87180672370985,
+      longitude: 2.3822191994069017,
+    },
   },
   {
     id: "2",
@@ -44,6 +52,10 @@ export const properties: Property[] = [
     owner: "Ronaldo",
     owner_info: "Superhost. Hosting guests for 5 years",
     owner_photo: "/profile-2.jpg",
+    coordinates: {
+      latitude: 41.402221097277945,
+      longitude: 2.184449293267691,
+    },
   },
   {
     id: "3",
@@ -57,6 +69,10 @@ export const properties: Property[] = [
     owner: "Messi",
     owner_info: "Superhost. Hosting guests for 3 years",
     owner_photo: "/profile-3.jpeg",
+    coordinates: {
+      latitude: 41.893858722971586,
+      longitude: 12.492164136299253,
+    },
   },
   {
     id: "4",
@@ -70,6 +86,10 @@ export const properties: Property[] = [
     owner: "Elqiz",
     owner_info: "Superhost. Hosting guests for 12 years",
     owner_photo: "/profile-4.jpg",
+    coordinates: {
+      latitude: 51.455767013834766,
+      longitude: -0.08238732101364345,
+    },
   },
   {
     id: "5",
@@ -83,6 +103,10 @@ export const properties: Property[] = [
     owner: "Rasim",
     owner_info: "Superhost. Hosting guests for 7 years",
     owner_photo: "/profile-5.jpeg",
+    coordinates: {
+      latitude: 51.56365688548866,
+      longitude: -0.09137376154267114,
+    },
   },
   {
     id: "6",
@@ -96,6 +120,10 @@ export const properties: Property[] = [
     owner: "Firenqiz",
     owner_info: "Superhost. Hosting guests for 2 years",
     owner_photo: "/profile-6.jpeg",
+    coordinates: {
+      latitude: 50.08873735727238,
+      longitude: 14.462430992522883,
+    },
   },
   {
     id: "7",
@@ -109,6 +137,10 @@ export const properties: Property[] = [
     owner: "Serqey",
     owner_info: "Superhost. Hosting guests for 1 year",
     owner_photo: "/profile-7.jpeg",
+    coordinates: {
+      latitude: 52.52473239330248,
+      longitude: 13.396301166739114,
+    },
   },
   {
     id: "8",
@@ -122,5 +154,9 @@ export const properties: Property[] = [
     owner: "Perera",
     owner_info: "Superhost. Hosting guests for 7 years",
     owner_photo: "/profile-1.avif",
+    coordinates: {
+      latitude: 41.0563735137193,
+      longitude: 28.9668306102633,
+    },
   },
 ];
