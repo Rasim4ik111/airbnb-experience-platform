@@ -7,7 +7,6 @@ function App() {
   return (
     <div style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <Header />
-
       <section className="">
         <PropertyList properties={properties} />
       </section>

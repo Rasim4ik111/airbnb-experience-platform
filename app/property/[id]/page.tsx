@@ -1,5 +1,6 @@
 import { BookingForm } from "@/app/components/booking/BookingForm";
 import { Header } from "@/app/components/layouts/Header";
+import { MapView } from "@/app/components/property/MapView";
 import { PropertyGallery } from "@/app/components/property/PropertyGallery";
 import { PropertyReviews } from "@/app/components/property/PropertyReviews";
 import { properties } from "@/data/properties";
@@ -44,9 +45,16 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
                 <p className="opacity-50">{property.owner_info}</p>
               </div>
             </div>
-
-            <div className="mt-4">
+            <div className="mt-4 border-b border-gray-200 pb-10">
               <PropertyReviews />
+            </div>
+            <div className=""></div>
+
+            <div className="mt-10 pb-10">
+              <MapView
+                latitude={property.coordinates.latitude}
+                longitude={property.coordinates.longitude}
+              />
             </div>
           </div>
 
