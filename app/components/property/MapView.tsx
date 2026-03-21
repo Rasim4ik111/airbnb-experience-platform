@@ -16,6 +16,7 @@ export const MapView = ({ latitude, longitude }: CordInterface) => {
       "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
     shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
   });
+
   return (
     <MapContainer
       center={[latitude, longitude]}
