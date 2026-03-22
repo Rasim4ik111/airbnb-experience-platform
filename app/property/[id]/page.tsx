@@ -1,10 +1,10 @@
 import { BookingForm } from "@/app/components/booking/BookingForm";
 import { Header } from "@/app/components/layouts/Header";
-import { MapView } from "@/app/components/property/MapView";
 import { PropertyGallery } from "@/app/components/property/PropertyGallery";
 import { PropertyReviews } from "@/app/components/property/PropertyReviews";
 import { properties } from "@/data/properties";
 import Image from "next/image";
+import MapViewClient from "@/app/components/property/MapViewClient";
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
@@ -51,7 +51,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             <div className=""></div>
 
             <div className="mt-10 pb-10">
-              <MapView
+              <MapViewClient
                 latitude={property.coordinates.latitude}
                 longitude={property.coordinates.longitude}
               />
