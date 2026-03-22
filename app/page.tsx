@@ -7,7 +7,7 @@ function App() {
   return (
     <div style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <Header />
-      <section className="">
+      <section className="max-w-7xl">
         <PropertyList properties={properties} />
       </section>
     </div>
