@@ -46,7 +46,7 @@ const PropertyList = ({ properties }: PropertyListProps) => {
 
   return (
     <div className="flex  flex-col ">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between ">
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}

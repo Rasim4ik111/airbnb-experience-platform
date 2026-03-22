@@ -31,7 +31,7 @@ const PropertyCard = ({
 
   return (
     <Link href={`property/${id}`}>
-      <div className="m-4 w-72 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition cursor-pointer">
+      <div className="m-4 w-72 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition">
         <div className="relative">
           <Image
             src={images[currentImage]}

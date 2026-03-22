@@ -28,7 +28,7 @@ export const SearchFilters = ({ onFilterChange }: SearchFiltersProps) => {
       <select
         value={minRating}
         onChange={(e) => setMinRating(Number(e.target.value))}
-        className="border border-gray-400 rounded-2xl p-2 w-30"
+        className="border border-gray-300 rounded-full p-2 w-30"
       >
         <option value={0}>All rating</option>
         <option value={3}>3+</option>
@@ -41,21 +41,21 @@ export const SearchFilters = ({ onFilterChange }: SearchFiltersProps) => {
         value={minPrice}
         onChange={(e) => setMinPrice(Number(e.target.value))}
         placeholder="Min price"
-        className="border border-gray-400 rounded-2xl p-2 w-30"
+        className="border border-gray-300 rounded-full p-2 w-30"
       />
       <input
         type="text"
         value={maxPrice}
         onChange={(e) => setMaxPrice(Number(e.target.value))}
         placeholder="Max price"
-        className="border border-gray-400 rounded-2xl p-2 w-30"
+        className="border border-gray-300 rounded-full p-2 w-30"
       />
       <input
         type="text"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
         placeholder="Location"
-        className="border border-gray-400 rounded-2xl p-2 w-30"
+        className="border border-gray-300 rounded-full p-2 w-30"
       />
     </div>
   );
