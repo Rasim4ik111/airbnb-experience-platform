@@ -1,10 +1,18 @@
 "use client";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
+import { Toast } from "../shared/Toast";
+import { useBookings } from "@/app/hooks/useBookings";
 
 interface BookingState {
   checkIn: string;
   checkOut: string;
   guests: number;
+}
+
+interface BookingFormProps {
+  price: number;
+  nights?: number;
+  propertyTitle: string; // добавь
 }
 
 const initialState: BookingState = {
@@ -36,8 +44,26 @@ interface BookingFormProps {
   nights?: number;
 }
 
-export const BookingForm = ({ price, nights = 1 }: BookingFormProps) => {
+export const BookingForm = ({
+  price,
+  nights = 1,
+  propertyTitle,
+}: BookingFormProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [toast, setToast] = useState(false);
+  const { addBooking } = useBookings();
+
+  const handleBook = () => {
+    addBooking({
+      id: Date.now().toString(),
+      propertyTitle,
+      checkIn: state.checkIn,
+      checkOut: state.checkOut,
+      guests: state.guests,
+      price,
+    });
+    setToast(true);
+  };
 
   const getGuestLabel = (n: number) => `guest${n > 1 ? "s" : ""}`;
 
@@ -105,9 +131,20 @@ export const BookingForm = ({ price, nights = 1 }: BookingFormProps) => {
       </div>
 
       {/* Button */}
-      <button className="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-3 rounded-xl transition text-lg">
+      <button
+        onClick={handleBook}
+        className="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-3 rounded-xl transition text-lg"
+      >
         Book Now
       </button>
+
+      {toast && (
+        <Toast
+          message="Booked Succesfuly!"
+          type="success"
+          onClose={() => setToast(false)}
+        />
+      )}
 
       <p className="text-center text-sm opacity-60 mt-2">
         You won't be charged yet

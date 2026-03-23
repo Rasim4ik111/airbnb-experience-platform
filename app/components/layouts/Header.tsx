@@ -22,9 +22,12 @@ export const Header = () => {
 
       <ThemeToggle />
       <nav>
-        <button className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-black transition dark:text-gray-500">
-          Profile
-        </button>
+        <a
+          href="/bookings"
+          className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 transition"
+        >
+          My Bookings
+        </a>
       </nav>
     </header>
   );

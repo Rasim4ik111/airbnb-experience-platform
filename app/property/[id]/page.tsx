@@ -60,7 +60,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
           {/* Right */}
           <div className="sticky top-30 self-start">
-            <BookingForm price={property.price} />
+            <BookingForm
+              price={property.price}
+              propertyTitle={property.title}
+            />
           </div>
         </div>
       </main>
