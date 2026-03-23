@@ -2,7 +2,7 @@
 import PropertyList from "./components/property/PropertyList";
 import { Header } from "./components/layouts/Header";
 import { properties } from "@/data/properties";
-import ErrorBoundary from "./components/shared/ErrorBoundary";
+import { ErrorBoundary } from "./components/shared/ErrorBoundary";
 
 function App() {
   return (
