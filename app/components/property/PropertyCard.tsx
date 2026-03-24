@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useFavorites } from "@/app/hooks/useFavorites";
 
 interface PropertyCardProps {
   id: string;
@@ -21,11 +22,7 @@ const PropertyCard = ({
   images,
 }: PropertyCardProps) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [isFavorite, setisFavorite] = useState<boolean>(false);
-
-  const handleClick = () => {
-    setisFavorite((a) => !a);
-  };
+  const { toggleFavorite, isFavorite } = useFavorites();
 
   if (!images.length) return null;
 
@@ -41,10 +38,13 @@ const PropertyCard = ({
             className="w-full h-48 object-cover"
           />
           <button
-            onClick={handleClick}
-            className="absolute top-3 right-3 text-xl "
+            onClick={(e) => {
+              e.preventDefault();
+              toggleFavorite(id);
+            }}
+            className="absolute top-3 right-3 text-xl"
           >
-            {isFavorite ? "❤️" : "🤍"}
+            {isFavorite(id) ? "❤️" : "🤍"}
           </button>
         </div>
         <div className="p-4">

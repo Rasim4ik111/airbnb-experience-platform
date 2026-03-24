@@ -23,8 +23,14 @@ export const Header = () => {
       <ThemeToggle />
       <nav>
         <a
+          className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-200 hover:bg-gray-100 transition"
+          href="/favorites"
+        >
+          ❤️ Favorites
+        </a>
+        <a
           href="/bookings"
-          className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 transition"
+          className="hover:cursor-pointer px-4 py-2 rounded-full border border-gray-200 hover:bg-gray-100 transition"
         >
           My Bookings
         </a>
