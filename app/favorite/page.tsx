@@ -5,13 +5,12 @@ import { properties } from "@/data/properties";
 import PropertyCard from "../components/property/PropertyCard";
 
 export default function FavoritesPage() {
-  const [favoriteIds, setFavoriteIds] = useState<string[]>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("favorites");
-      return saved ? JSON.parse(saved) : [];
-    }
-    return [];
-  });
+  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("favorites");
+    if (saved) setFavoriteIds(JSON.parse(saved));
+  }, []);
 
   const favoriteProperties = properties.filter((p) =>
     favoriteIds.includes(p.id),
