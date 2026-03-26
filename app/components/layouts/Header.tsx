@@ -6,7 +6,7 @@ export const Header = () => {
       style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}
       className="flex justify-around items-center border-b border-gray-300 dark:border-gray-200 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white"
     >
-      <a href="/">
+      <a href="./">
         <svg
           width="102"
           height="32"

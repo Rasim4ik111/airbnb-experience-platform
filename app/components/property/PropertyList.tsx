@@ -44,7 +44,7 @@ const PropertyList = ({ properties }: PropertyListProps) => {
 
   return (
     <div className="flex  flex-col ">
-      <div className="flex items-center justify-end m-3 ">
+      <div className="flex items-center justify-end m-3">
         <SearchFilters onFilterChange={setFilters} />
       </div>
       <div className="flex flex-wrap justify-start px-20 w-[1440] mx-auto ">

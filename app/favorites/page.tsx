@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Header } from "../components/layouts/Header";
 import { properties } from "@/data/properties";
 import PropertyCard from "../components/property/PropertyCard";
