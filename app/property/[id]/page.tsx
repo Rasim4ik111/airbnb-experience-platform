@@ -46,7 +46,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               </div>
             </div>
             <div className="mt-4 border-b border-gray-200 pb-10">
-              <PropertyReviews />
+              <PropertyReviews propertyId={property.id} />
             </div>
             <div className=""></div>
 
