@@ -1,4 +1,5 @@
 import ThemeToggle from "../shared/ThemeToggle";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -6,7 +7,7 @@ export const Header = () => {
       style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}
       className="flex justify-around items-center border-b border-gray-300 dark:border-gray-200 p-6 bg-gray-100 dark:bg-gray-800 dark:text-white"
     >
-      <a href="./">
+      <Link href="/">
         <svg
           width="102"
           height="32"
@@ -18,7 +19,7 @@ export const Header = () => {
             fill="currentcolor"
           />
         </svg>
-      </a>
+      </Link>
 
       <ThemeToggle />
       <nav>
