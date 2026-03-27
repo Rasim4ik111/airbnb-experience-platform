@@ -1,5 +1,4 @@
 "use client";
-import reviewdata from "@/data/reviewsdata";
 import { useReviews } from "@/app/hooks/useReviews";
 import Loading from "@/app/property/[id]/loading";
 
@@ -16,12 +15,11 @@ export const PropertyReviews = ({ propertyId }: { propertyId: string }) => {
   return (
     <div className="mt-2">
       <h1 className="text-end font-bold mb-6">
-        ★ 4.9 · {reviewdata.length} reviews
+        ★ 4.9 · {reviews.length} reviews
       </h1>
       <div className="grid grid-cols-2 gap-10">
         {reviews.map((r: any) => (
           <div key={r.id}>
-            {/* Автор */}
             <div className="flex items-center gap-5">
               <div className="flex items-center gap-3 mb-3">
                 <div>
@@ -34,7 +32,6 @@ export const PropertyReviews = ({ propertyId }: { propertyId: string }) => {
                 <div className="flex justify-end font-semibold text-xs"></div>
               </div>
             </div>
-            {/* Текст */}
             <p className="opacity-80">{r.text}</p>
           </div>
         ))}
