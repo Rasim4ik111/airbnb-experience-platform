@@ -25,7 +25,7 @@ Built an Airbnb Experience Platform using Next.js App Router with TypeScript and
 
 ```bash
 # Clone the repository
-git clone git@git.us.qwasar.io:02-modern-react-fundamentals_205497_jndv7s/02-modern-react-fundamentals.git
+git clone https://github.com/Rasim4ik111/airbnb-experience-platform.git
 
 # Navigate to project folder
 cd 02-modern-react-fundamentals
