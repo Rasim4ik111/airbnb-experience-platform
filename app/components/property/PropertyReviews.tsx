@@ -17,6 +17,7 @@ export const PropertyReviews = ({ propertyId }: { propertyId: string }) => {
       <h1 className="text-end font-bold mb-6">
         ★ 4.9 · {reviews.length} reviews
       </h1>
+
       <div className="grid grid-cols-2 gap-10">
         {reviews.map((r: any) => (
           <div key={r.id}>
