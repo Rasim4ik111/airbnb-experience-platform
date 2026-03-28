@@ -1,4 +1,4 @@
-# Welcome to 02 Modern React Fundamentals
+# Welcome to airbnb-experience-platform
 
 ---
 
