@@ -58,8 +58,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - Save favorites by clicking the ❤️ button
 - View bookings at `/bookings` and favorites at `/favorites`
 - Toggle dark/light mode with the theme button in the header
-
-### The Core Team
-
-suleyma_mi
-
